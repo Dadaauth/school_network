@@ -1,0 +1,199 @@
+/* header section */
+body{
+    margin: 0;
+    background-color: brown;
+}
+
+.header-nav{
+    background-color: firebrick;
+    padding: 0.6rem;
+    position: -webkit-sticky;
+    position: sticky;
+    top: -1px;
+    /* border-bottom: 2px solid white; */
+}
+
+/*when header is sticky */
+.isSticky{
+    padding: 0.1rem;
+    border: none;
+    box-shadow: 2px 3px 5px firebrick;
+}
+
+#brand-name{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: large;
+    display: inline-block;
+}
+
+
+/* header section end*/
+/* body section start */
+label{
+    display: block;
+    cursor: pointer;
+}
+
+/* sign up form container */
+#sign_up_form{
+    padding: 1rem;
+}
+#sign_up_form input{
+    margin: 0.5rem;
+    font-size: large;
+    font-weight: 900;
+}
+#sign_up_form input[type=file]{
+    display: none;
+} 
+
+.file-contain{
+    border: thin solid black;
+    padding: 3%;
+    text-align: center;
+}
+
+
+/* #signup-form-submit-btn{
+    position: sticky;
+    right: 12px;
+    bottom: 12px;
+} */
+#signup-form-submit-btn button{
+    border: none;
+    background-color: #334257;
+    color: white;   
+    padding: 1rem; 
+}
+
+.tp-style:focus{
+    border-bottom: 2px solid rgb(9, 9, 145);
+}
+
+.tp-style{
+    outline: none;
+    display: block;
+    border: none;
+    border-bottom: 1.5px solid black;
+    box-sizing: border-box;
+}
+/* body section end */
+
+
+
+
+/* ::::::::::: responsiveness desktop screen */
+/* ::::::::::: responsiveness desktop screen */
+/* ::::::::::: responsiveness desktop screen */
+/* ::::::::::: responsiveness desktop screen */
+/* ::::::::::: responsiveness desktop screen */
+/* ::::::::::: responsiveness desktop screen */
+/* ::::::::::: responsiveness desktop screen */
+/* ::::::::::: responsiveness desktop screen */
+/* ::::::::::: responsiveness desktop screen */
+/* ::::::::::: responsiveness desktop screen */
+/* ::::::::::: responsiveness desktop screen */
+/* ::::::::::: responsiveness desktop screen */
+/* ::::::::::: responsiveness desktop screen */
+@media only screen and (min-width: 768px){
+    /* ::::::::::::: Header Section :::::::::::::: */
+    #menu-toggle{
+        display: none;
+    }
+    #header-nav-ul{
+        display: inline-block;
+        position: absolute;
+        right: 12px;
+    }
+    
+    #header-nav-ul-li{
+        display: inline-block;
+        margin-left: 1rem;
+    }
+    /* :::::::::::::: Header Section End :::::::::: */
+
+
+
+    /* :::::::::::: Body Section ::::::::::::::::: */
+
+    /* school information form section */
+    #form-1{
+        display: inline-table;
+        background-color: white;
+        padding: 1rem 1rem 3rem 1rem;
+        margin-bottom: 1rem;
+    }
+
+    /* admin information form section */
+    #form-2{
+        display: inline-table;
+        background-color: white;
+        padding: 1rem 1rem 3rem 1rem;
+        margin-bottom: 1rem;
+    }
+
+    /* ::::::::::: Body Section End ::::::::::::::::: */
+}
+
+
+
+/* ::::::::::::::: responsiveness mobile screen */
+/* ::::::::::::::: responsiveness mobile screen */
+/* ::::::::::::::: responsiveness mobile screen */
+/* ::::::::::::::: responsiveness mobile screen */
+/* ::::::::::::::: responsiveness mobile screen */
+/* ::::::::::::::: responsiveness mobile screen */
+/* ::::::::::::::: responsiveness mobile screen */
+/* ::::::::::::::: responsiveness mobile screen */
+/* ::::::::::::::: responsiveness mobile screen */
+/* ::::::::::::::: responsiveness mobile screen */
+/* ::::::::::::::: responsiveness mobile screen */
+/* ::::::::::::::: responsiveness mobile screen */
+/* ::::::::::::::: responsiveness mobile screen */
+/* ::::::::::::::: responsiveness mobile screen */
+/* ::::::::::::::: responsiveness mobile screen */
+@media only screen and (max-width: 768px){
+    /* ::::::::::::: Header Section :::::::::::::: */
+    #menu-toggle{
+        font-size: 2rem;
+        display: inline-block;
+        position: absolute;
+        top: 1.4rem;
+        right: 12px;
+    }
+    #header-nav-ul{
+        display: none;
+        list-style: none;
+        padding: 0;
+        background-color: white;
+    }
+    
+    #header-nav-ul-li{
+        display: block;
+        margin-left: 1rem;
+        padding: 1rem;
+    }
+    /* :::::::::::::: Header Section End :::::::::: */
+
+
+
+    /* ::::::::::: Body Section ::::::::::::::::: */
+    /* school information form section */
+    #form-1{
+        display: block;
+        background-color: white;
+        padding: 1rem 1rem 3rem 1rem;
+        width: 70%;
+        margin: 1rem auto 1rem auto;
+    }
+
+    /* admin information form section */
+    #form-2{
+        display: block;
+        background-color: white;
+        padding: 1rem 1rem 3rem 1rem;
+        width: 70%;
+        margin: 1rem auto 1rem auto;
+    }
+    /* ::::::::::: Body Section End ::::::::::::::::: */
+}
