@@ -4,6 +4,28 @@ body{
     background-color: brown;
 }
 
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* form validations */
+span.validity::after {
+padding-left: 5px;
+}
+
+input:invalid + span.validity::after {
+content: "✖";
+color: red;
+}
+
+input:valid + span.validity::after {
+content: "✓";
+color: green;
+}
+
+  /* form validations end */
 .header-nav{
     background-color: firebrick;
     padding: 0.6rem;
@@ -116,16 +138,32 @@ label{
 
     /* :::::::::::: Body Section ::::::::::::::::: */
 
-    /* school information form section */
+    /* Total Form Section */
+    #sign_up_form{
+        width: 90%;
+        margin: 1rem auto 1rem auto;
+    }
+
+    /* school information 1 form section */
     #form-1{
         display: inline-table;
         background-color: white;
         padding: 1rem 1rem 3rem 1rem;
         margin-bottom: 1rem;
+        margin-right: 5rem;
+    }
+
+    /* school information 2 form section */
+    #form-2{
+        display: inline-table;
+        background-color: white;
+        padding: 1rem 1rem 3rem 1rem;
+        margin-bottom: 1rem;
+        margin-right: 5rem;
     }
 
     /* admin information form section */
-    #form-2{
+    #form-3{
         display: inline-table;
         background-color: white;
         padding: 1rem 1rem 3rem 1rem;
@@ -164,22 +202,34 @@ label{
     #header-nav-ul{
         display: none;
         list-style: none;
-        padding: 0;
-        background-color: white;
+        padding: 1rem 1rem 1rem 0;
     }
     
     #header-nav-ul-li{
         display: block;
-        margin-left: 1rem;
         padding: 1rem;
+        background-color: white;
+        margin-bottom: 1rem;
+        border-radius: 1rem;
+        box-shadow: 5px 5px 5px floralwhite;
     }
     /* :::::::::::::: Header Section End :::::::::: */
 
 
 
     /* ::::::::::: Body Section ::::::::::::::::: */
-    /* school information form section */
+    /* school information 1 form section */
     #form-1{
+        display: block;
+        background-color: white;
+        padding: 1rem 1rem 3rem 1rem;
+        width: 70%;
+        margin: 1rem auto 1rem auto;
+        /* add shadow to make the form boxes stand out */
+    }
+
+    /* school information 2 form section */
+    #form-2{
         display: block;
         background-color: white;
         padding: 1rem 1rem 3rem 1rem;
@@ -188,7 +238,7 @@ label{
     }
 
     /* admin information form section */
-    #form-2{
+    #form-3{
         display: block;
         background-color: white;
         padding: 1rem 1rem 3rem 1rem;

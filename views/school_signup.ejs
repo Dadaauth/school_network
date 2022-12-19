@@ -13,41 +13,82 @@
             <h3 id="brand-name">School Network</h3>
             <span id="menu-toggle"><i class="bi bi-list"></i></span>
             <ul id="header-nav-ul">
-                    <li id="header-nav-ul-li">Get Started</li>
-                    <li id="header-nav-ul-li">Contribute</li>
-                    <li id="header-nav-ul-li">Sign in</li>
-                    <li id="header-nav-ul-li">Sign up</li>
+                    <a href="#"><li id="header-nav-ul-li">Get Started</li></a>
+                    <a href="#"><li id="header-nav-ul-li">Contribute</li></a>
+                    <a href="#"><li id="header-nav-ul-li">Sign in</li></a>
+                    <a href="#"><li id="header-nav-ul-li">Sign up</li></a>
             </ul>
         </nav>
         <div id="sign_up_form" class="nothing">
             <form action="/school_signup" method="post">
                 <p>Please Register As The Admin Of Your School</p>
+                <!-- first form section -->
                 <div id="form-1">
                     <h4>School Information</h4>
-                    <label for="school_name">School Name<span style="color:red;">*</span></label>
-                    <input type="text" class="tp-style" name="school_name" id="school_name" placeholder="Your School Name">
-                    <label for="school_username">School Username<span style="color:red;">*</span></label>
-                    <input type="text" class="tp-style" name="school_username" id="school_username" placeholder="Your School Username">
-                    <label for="school_desc_motto">School Description || Motto<span style="color:red;">*</span></label>
-                    <input type="text" class="tp-style" name="school_desc_motto" id="school_desc_motto" placeholder="Your School Description Or Motto">
+                    <label for="school_name">School Name<span style="color:red;"> *</span></label>
+                    <input type="text" class="tp-style" name="school_name" id="school_name" placeholder="Your School Name" required>
+                    <span class="validity"></span>
+                    <label for="school_username">School Username<span style="color:red;"> *</span></label>
+                    <input type="text" class="tp-style" name="school_username" id="school_username" placeholder="Your School Username" required>
+                    <span class="validity"></span>
+                    <label for="school_desc_motto">School Description || Motto<span style="color:red;"> *</span></label>
+                    <input type="text" class="tp-style" name="school_desc_motto" id="school_desc_motto" placeholder="Your School Description Or Motto" required>
+                    <span class="validity"></span>
+                    <label for="school_vision">Vision</label>
+                    <input type="text" name="school_vision" id="school_vision" placeholder="Vision" class="tp-style">
+                    <label for="school_mission">Mission</label>
+                    <input type="text" name="school_mission" id="school_mission" placeholder="Mission" class="tp-style">
+                    <label for="school_email">School Official Email<span style="color:red;"> *</span></label>
+                    <input type="email" name="school_email" id="school_email" placeholder="School Email" class="tp-style" required>
+                    <span class="validity"></span>
+                    <label for="school_phone">School Official Phone<span style="color:red;"> *</span></label>
+                    <input type="number" name="school_phone" id="school_phone" placeholder="School Phone" class="tp-style" required>
+                    <span class="validity"></span>
+                </div>
+                <!-- second form section -->
+                <div id="form-2">
+                    <label for="date_founded">Date Founded<span style="color:red;"> *</span></label>
+                    <input type="date" name="date_founded" id="date_founded" placeholder="Date Founded" class="tp-style" required>
+                    <span class="validity"></span>
+                    <!-- ::::::::: WORK ON THIS ::::::::::: -->
+                    <h4>Available Classes</h4>
+                    <input type="checkbox" name="js1" id="" value="js1"> JS1
+                    <input type="checkbox" name="js2" id="" value="js2"> JS2
+                    <input type="checkbox" name="js2" id="" value="js3"> JS3<br/>
+                    <input type="checkbox" name="js2" id="" value="ss1"> SS1
+                    <input type="checkbox" name="js2" id="" value="ss2"> SS2
+                    <input type="checkbox" name="js2" id="" value="ss3"> SS3<br/>
+                    <span style="font-size: small;">You can add other classes later!</span>
+                    <!-- ::::::::: WORK ON THIS END ::::::::::: -->
+                    
+
                     <div class="file-contain">
-                        <label for="school_logo">School Logo<span style="color:red;">*</span></br>
+                        <label for="school_logo">School Logo<span style="color:red;"> *</span></br>
                             <i class="bi bi-camera-fill"></i>
                             <input type="file" accept="image/png, image/jpg, image/gif, image/jpeg" name="school_logo" id="school_logo" class="file"><br/>
                             <span id="file-name" style="color: green;"></span>
                         </label>
                     </div>
                 </div>
-                <div id="form-2">
+                <!-- third form section -->
+                <div id="form-3">
                     <h4>Admin Information</h4>
-                    <label for="admin_name">Admin Name<span style="color:red;">*</span></label>
-                    <input type="text" class="tp-style" name="admin_name" id="admin_name" placeholder="Admin Name || Your Name">
-                    <label for="password">Password<span style="color:red;">*</span></label>
-                    <input type="password" class="tp-style" name="password" id="password" placeholder="Your Password">
+                    <label for="admin_first_name">Admin First Name<span style="color:red;"> *</span></label>
+                    <input type="text" class="tp-style" name="admin_first_name" id="admin_first_name" placeholder="Admin First Name || Your Name" required>
+                    <label for="admin_last_name">Admin Last Name<span style="color:red;"> *</span></label>
+                    <input type="text" class="tp-style" name="admin_last_name" id="admin_last_name" placeholder="Admin Last Name || Your Last Name" required>
+                    <label for="admin_other_name">Admin Other Name<span style="color:red;"> *</span></label>
+                    <input type="text" class="tp-style" name="admin_other_name" id="admin_other_name" placeholder="Admin Other Name || Your Other Name" required>
+                    <span class="validity"></span>
+                    <label for="position_in_school">Position<span style="color:red;"> *</span></label>
+                    <input type="text" class="tp-style" name="position_in_school" id="position_in_school" placeholder="Position In School" required>
+                    <label for="password">Password<span style="color:red;"> *</span></label>
+                    <input type="password" class="tp-style" name="password" id="password" placeholder="Admin Password" required>
+                    <span class="validity"></span>
                     <div class="file-contain">
-                        <label for="profile_picture">Your Picture<span style="color:red;">*</span></br>
+                        <label for="profile_picture">Your Picture<span style="color:red;"> *</span></br>
                             <i class="bi bi-camera-fill"></i>
-                            <input type="file" accept="image/png, image/jpg, image/gif, image/jpeg" name="profile_picture" id="profile_picture" class="file"><br/>
+                            <input type="file" accept="image/png, image/jpg, image/gif, image/jpeg" name="profile_picture" id="profile_picture" class="file" required><br/>
                             <span id="file-name2" style="color: green;"></span>
                         </label>
                     </div>
@@ -57,26 +98,17 @@
                 </div>
             </form>
         </div>
+        <script src="https://code.jquery.com/jquery-3.6.2.min.js" integrity="sha256-2krYZKh//PcchRtd+H+VyyQoZ/e3EcrkxhM8ycwASPA=" crossorigin="anonymous"></script>
         <script>
             try{
-                var menuToggle = document.getElementById("menu-toggle");
-                var menuShow = document.getElementById("header-nav-ul");
-                function displayToggle(displayedItem, style) {
-                    return displayedItem.style.display = `${style}`;
-                }
-                menuToggle.addEventListener("click", () => {
-                    if(menuShow.style.display === "none"){
-                        displayToggle(menuShow, "block")
-                    }else if(menuShow.style.display === "block"){
-                        displayToggle(menuShow, "none")
-                    }
+                $( "#menu-toggle" ).click(function() {
+                $( "#header-nav-ul" ).toggle( "slow", function() {
+                    // Animation complete.
+                });
                 });
             }
             catch(err){
-                alert(err);
             }
-
-
             try{
                 const stickyElm = document.querySelector("nav");
                 const observer = new IntersectionObserver(
