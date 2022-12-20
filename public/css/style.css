@@ -1,7 +1,26 @@
 /* header section */
-body{
+html, body{
     margin: 0;
+    padding: 0;
     background-color: brown;
+    height: 100%;
+}
+
+#body-section{
+    min-height: 94.7%;
+    height: auto !important;
+    margin-bottom: calc(-50px);
+    padding-bottom: 2rem;
+}
+
+#footer{
+    height: 50px;
+}
+
+#footer-content{
+    height: 26px;
+    padding: 12px;
+    background-color: white;
 }
 
 a{
@@ -9,23 +28,6 @@ a{
     text-decoration: none;
 }
 
-
-/* form validations */
-span.validity::after {
-padding-left: 5px;
-}
-
-input:invalid + span.validity::after {
-content: "✖";
-color: red;
-}
-
-input:valid + span.validity::after {
-content: "✓";
-color: green;
-}
-
-  /* form validations end */
 .header-nav{
     background-color: firebrick;
     padding: 0.6rem;
@@ -99,6 +101,23 @@ label{
     border-bottom: 1.5px solid black;
     box-sizing: border-box;
 }
+
+/* form validations */
+span.validity::after {
+    padding-left: 5px;
+    }
+    
+    input:invalid + span.validity::after {
+    content: "✖";
+    color: red;
+    }
+    
+    input:valid + span.validity::after {
+    content: "✓";
+    color: green;
+    }
+    
+      /* form validations end */
 /* body section end */
 
 

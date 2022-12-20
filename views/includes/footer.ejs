@@ -1,0 +1,65 @@
+</section>
+<!-- body section end -->
+<!-- footer section -->
+<footer id="footer">
+    <p id="footer-content">&copy; 2022 School Network. All Rights Reserved!</p>
+</footer>
+<!-- footer section end -->
+<script src="https://code.jquery.com/jquery-3.6.2.min.js" integrity="sha256-2krYZKh//PcchRtd+H+VyyQoZ/e3EcrkxhM8ycwASPA=" crossorigin="anonymous"></script>
+<script>
+    try{
+        $( "#menu-toggle" ).click(function() {
+        $( "#header-nav-ul" ).toggle( "slow", function() {
+            // Animation complete.
+        });
+        });
+    }
+    catch(err){
+    }
+    try{
+        const stickyElm = document.querySelector("nav");
+        const observer = new IntersectionObserver(
+            ([e]) => e.target.classList.toggle('isSticky', e.intersectionRatio < 1),
+            {threshold: [1]}                
+        );
+        observer.observe(stickyElm);
+    }
+    catch(err){
+
+    }
+
+    // for school logo file input design
+    try{
+        function inputSChLogo(){
+            let input = document.getElementById("school_logo");
+            let fileName = document.getElementById("file-name");
+
+            input.addEventListener("change", ()=>{
+                let inputImage = document.querySelectorAll("input[type=file]")[0].files[0];
+
+                fileName.innerText = inputImage.name;
+            });
+        }
+        inputSChLogo();
+
+        // for admin profile picture file input design
+        function inputAdminProf(){
+            const input2 = document.getElementById("profile_picture");
+            const fileName2 = document.getElementById("file-name2");
+
+            input2.addEventListener("change", ()=>{
+                let inputImage = document.querySelectorAll("input[type=file]")[1].files[0];
+
+                fileName2.innerText = inputImage.name;
+            });
+        }
+        inputAdminProf();
+    }
+    catch(err){
+
+    }
+    
+</script>
+<script src="" async defer></script>
+</body>
+</html>

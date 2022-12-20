@@ -18,6 +18,7 @@ const app = express();
 app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
+app.use("/login", express.static("public"));
 
 // // connect to mongoose
 // // mongoose.connect("mongodb+srv://authority:4141clement%3F@cluster0.gs6bw9m.mongodb.net/socialiteDB");
@@ -74,6 +75,10 @@ passport.serializeUser(function(user, done) {
 
 app.get("/school-signup", (req, res) => {
     res.render("school_signup");
+});
+
+app.get("/login/student", (req, res) => {
+    res.render("student_login");
 });
 
 app.get("/test", (req, res) => {
